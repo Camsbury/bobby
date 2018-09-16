@@ -22,7 +22,14 @@ library
   default-language:    Haskell2010
   exposed-modules:
                    Prelude
-  -- other-modules:
+                   Bobby
+  other-modules:
+                 Bobby.Game
+                 Bobby.Game.Board
+                 Bobby.Type
+                 Bobby.Type.Board
+                 Bobby.Type.Color
+                 Bobby.Type.Piece
   default-extensions:
                      DerivingStrategies
                      FlexibleContexts
