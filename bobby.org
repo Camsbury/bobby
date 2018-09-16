@@ -1,0 +1,41 @@
+#+TITLE: bobby-project
+
+* description
+** principles
+** reqs
+** format
+** ideas
+*** [ ] types
+**** [ ] board reprensentation
+***** [x] board type
+***** [ ] board instances
+****** [x] show instance
+****** [x] pretty print swapped with show
+****** [ ] generator
+****** [ ] board validator
+****** [ ] valid state generator
+***** [ ] valid generator
+**** [ ] move reprensentation
+***** [ ] move type
+***** [ ] move instances
+***** [ ] move validator
+***** [ ] move generator
+***** [ ] applyMove :: Move -> Board -> Board
+**** [ ] game/turn reprensentation
+***** [ ] whose move?
+***** [ ] used/disabled castle?
+***** [ ] valid en passant square -> maybe coords
+***** [ ] game validator
+***** [ ] game generator
+*** [ ] add hedgehog and just use that for everything...
+*** [ ] properties
+**** [ ] no valid move will invalidate a valid board
+*** [ ] board validation
+*** [ ] board generation
+*** [ ] board Show instance for the cmd line
+*** [ ] board to FEN
+*** [ ] game to blah rep
+*** [ ] move API using UCI
+** timeline
+** what sucks?
+** what is great?
