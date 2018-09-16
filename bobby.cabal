@@ -29,7 +29,10 @@ library
                  Bobby.Type
                  Bobby.Type.Board
                  Bobby.Type.Color
+                 Bobby.Type.Game
+                 Bobby.Type.Move
                  Bobby.Type.Piece
+                 Bobby.Type.Square
   default-extensions:
                      DerivingStrategies
                      FlexibleContexts
