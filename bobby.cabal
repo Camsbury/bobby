@@ -24,6 +24,8 @@ library
                    Prelude
                    Bobby
   other-modules:
+                 Bobby.Convert
+                 Bobby.Convert.Square
                  Bobby.Game
                  Bobby.Game.Board
                  Bobby.Type
