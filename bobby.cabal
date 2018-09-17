@@ -23,12 +23,14 @@ library
   exposed-modules:
                    Prelude
                    Bobby
+                   Bobby.Convert
+                   Bobby.Game
+                   Bobby.Type
+                   Bobby.Generators
   other-modules:
-                 Bobby.Convert
                  Bobby.Convert.Square
-                 Bobby.Game
                  Bobby.Game.Board
-                 Bobby.Type
+                 Bobby.Generators.Internal
                  Bobby.Type.Board
                  Bobby.Type.Color
                  Bobby.Type.Game
@@ -44,15 +46,17 @@ library
                      OverloadedStrings
                      ScopedTypeVariables
                      TypeApplications
-  build-depends:       base-noprelude >=4.11 && <4.12
+  build-depends:       base-noprelude >=4.10 && <4.12
                      , classy-prelude
+                     , data-default
+                     , hedgehog
+                     , hedgehog-fn
                      , lens
                      , mtl
                      , text
                      , transformers
                      , unordered-containers
                      , vector
-                     , data-default
 
 executable bobby
   main-is:             Main.hs
@@ -60,6 +64,33 @@ executable bobby
   -- other-extensions:
   hs-source-dirs:      app
   default-language:    Haskell2010
-  build-depends:       base-noprelude >=4.11 && <4.12
+  build-depends:       base-noprelude >=4.10 && <4.12
                      , classy-prelude
                      , bobby
+
+test-suite bobby-tests
+  main-is:             Main.hs
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  default-language:    Haskell2010
+  default-extensions:
+                     DerivingStrategies
+                     FlexibleContexts
+                     FlexibleInstances
+                     FunctionalDependencies
+                     NoImplicitPrelude
+                     OverloadedStrings
+                     ScopedTypeVariables
+                     TypeApplications
+  build-depends:       base-noprelude >=4.10 && <4.12
+                     , classy-prelude
+                     , bobby
+                     , checkers
+                     , hedgehog
+                     , hedgehog-checkers
+                     , hedgehog-checkers-lens
+                     , hedgehog-fn
+                     , lens
+                     , tasty
+                     , tasty-discover
+                     , tasty-hedgehog
