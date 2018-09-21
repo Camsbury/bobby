@@ -8,11 +8,13 @@
 --------------------------------------------------------------------------------
 module Bobby.Type
   ( module Bobby.Type.Board
-  , module Bobby.Type.Piece
   , module Bobby.Type.Color
+  , module Bobby.Type.Piece
+  , module Bobby.Type.Square
   ) where
 --------------------------------------------------------------------------------
 
 import Bobby.Type.Board
-import Bobby.Type.Piece
 import Bobby.Type.Color
+import Bobby.Type.Piece
+import Bobby.Type.Square

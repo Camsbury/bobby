@@ -2,6 +2,7 @@
 
 * description
 ** principles
+*** API first
 ** reqs
 ** format
 ** ideas
@@ -27,7 +28,7 @@
 ***** [ ] valid en passant square -> maybe coords
 ***** [ ] game validator
 ***** [ ] game generator
-*** [ ] add hedgehog and just use that for everything...
+*** [x] add hedgehog and just use that for everything...
 *** [ ] properties
 **** [ ] no valid move will invalidate a valid board
 *** [ ] board validation
@@ -36,6 +37,11 @@
 *** [ ] board to FEN
 *** [ ] game to blah rep
 *** [ ] move API using UCI
-** timeline
+** tests
+*** [ ] test prism laws on toWord
+*** [ ] test round tripping with prism toWord
+*** [ ] test prism laws on toUCI
+*** [ ] test round tripping with prism toUCI
+** timeline -> think about MVP?
 ** what sucks?
 ** what is great?

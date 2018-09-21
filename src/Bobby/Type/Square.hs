@@ -1,3 +1,5 @@
+{-# LANGUAGE DeriveGeneric #-}
+--------------------------------------------------------------------------------
 -- |
 -- Module: Bobby.Type.Square
 -- Description: Provides the 'Square' type and accessors
@@ -6,12 +8,20 @@
 --
 --------------------------------------------------------------------------------
 module Bobby.Type.Square
-  ( module Bobby.Type.Square
+  ( Square(..)
+  , genSquare
+  , genSquareTweak
   ) where
 --------------------------------------------------------------------------------
 import Prelude
 --------------------------------------------------------------------------------
+import Hedgehog (Gen)
+--------------------------------------------------------------------------------
+import qualified Hedgehog.Function as Fn
+import qualified Hedgehog.Gen as Gen
+--------------------------------------------------------------------------------
 
+-- | Represents a square on a chess board
 data Square
   = A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8
   | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8
@@ -21,4 +31,18 @@ data Square
   | F1 | F2 | F3 | F4 | F5 | F6 | F7 | F8
   | G1 | G2 | G3 | G4 | G5 | G6 | G7 | G8
   | H1 | H2 | H3 | H4 | H5 | H6 | H7 | H8
-  deriving (Eq, Show)
+  deriving stock (Eq, Show, Enum, Bounded, Generic)
+
+instance Fn.Arg Square
+instance Fn.Vary Square
+
+-- | Generates a square on the chess board
+genSquare :: Gen Square
+genSquare = Gen.element squareList
+
+-- | Generates a function from 'Square' to 'Square'
+genSquareTweak :: Gen (Square -> Square)
+genSquareTweak = Fn.apply <$> Fn.fn genSquare
+
+squareList :: [Square]
+squareList = [minBound..maxBound]

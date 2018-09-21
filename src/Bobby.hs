@@ -7,9 +7,11 @@
 --
 --------------------------------------------------------------------------------
 module Bobby
-  ( module Bobby.Type
+  ( module Bobby.Convert
   , module Bobby.Game
+  , module Bobby.Type
   ) where
 --------------------------------------------------------------------------------
-import Bobby.Type
+import Bobby.Convert
 import Bobby.Game
+import Bobby.Type
