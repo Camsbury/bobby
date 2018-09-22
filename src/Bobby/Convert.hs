@@ -10,6 +10,4 @@ module Bobby.Convert
   ( module Bobby.Convert.Square
   ) where
 --------------------------------------------------------------------------------
-import Prelude
---------------------------------------------------------------------------------
 import Bobby.Convert.Square

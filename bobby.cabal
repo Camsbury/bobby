@@ -44,8 +44,10 @@ library
                      FunctionalDependencies
                      NoImplicitPrelude
                      OverloadedStrings
+                     OverloadedLists
                      ScopedTypeVariables
                      TypeApplications
+                     TupleSections
   build-depends:       base-noprelude >=4.10 && <4.12
                      , classy-prelude
                      , data-default
@@ -80,8 +82,10 @@ test-suite bobby-tests
                      FunctionalDependencies
                      NoImplicitPrelude
                      OverloadedStrings
+                     OverloadedLists
                      ScopedTypeVariables
                      TypeApplications
+                     TupleSections
   build-depends:       base-noprelude >=4.10 && <4.12
                      , classy-prelude
                      , bobby
